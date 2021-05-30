@@ -27,7 +27,8 @@ class SecondActivity : AppCompatActivity(), SetOnDeleteListener {
         val view = binding.root
         setContentView(view)
         setSupportActionBar(binding.toolbar)
-        binding.toolbar.title = "My Plan"
+        supportActionBar?.title = "Eleplanner"
+
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

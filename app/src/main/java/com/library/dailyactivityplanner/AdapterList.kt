@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -31,7 +32,11 @@ class AdapterList(
             TimeConverter.getDate(itemData.endTime!!, TimeConverter.YYYY_MM_DD_HH_MM_SS)
         }"
         holder.ivDelete.setOnClickListener {
-            callback.onDeleteListener(itemData.id!!)
+            if(itemData.id!= null){
+                callback.onDeleteListener(itemData.id!!)
+            }else{
+                Toast.makeText(context, "Id activity null", Toast.LENGTH_SHORT).show()
+            }
         }
 
     }

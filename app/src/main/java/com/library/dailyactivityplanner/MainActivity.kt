@@ -11,12 +11,14 @@ import android.util.Log
 import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.core.app.NotificationCompat
 import com.library.dailyactivityplanner.databinding.ActivityMainBinding
 import java.text.DateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class
+MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var isStartTimeProperly = false
     private var isEndTimeProperly = false
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         setSupportActionBar(binding.toolbar)
-        binding.toolbar.title = "Daily Activity Planner"
+        supportActionBar?.title = "Eleplanner"
         val calendar: Calendar = Calendar.getInstance()
         val startDatePickerDialog =
             DatePickerDialog(

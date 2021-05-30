@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <ImageView
+        android:alpha="0.35"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,6 +36,7 @@
                 android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
 
+
             <EditText
                 android:id="@+id/etLocation"
                 android:layout_width="match_parent"
@@ -34,16 +44,26 @@
                 android:layout_marginStart="@dimen/size_32"
                 android:layout_marginEnd="@dimen/size_32"
                 android:textAlignment="center"
-                app:layout_constraintTop_toBottomOf="@id/etActivity" />
+                app:layout_constraintTop_toBottomOf="@id/tvQuestionWhere" />
 
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_8"
+                android:layout_marginTop="@dimen/size_16"
                 android:text="Good Morning, User"
                 android:textSize="@dimen/text_20"
                 app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSave" />
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_8"
+                android:layout_marginEnd="@dimen/size_8"
+                android:text="#SavePalestina"
+                android:textSize="@dimen/text_20"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
@@ -59,6 +79,18 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+            <TextView
+                android:id="@+id/tvQuestionWhere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_32"
+                android:layout_marginTop="@dimen/size_8"
+                android:text="Where is it?"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_20"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etActivity" />
 
             <TextView
                 android:id="@+id/tvQuestionTime"

@@ -10,6 +10,16 @@
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:alpha="0.35"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clSort"
